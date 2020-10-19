@@ -41,10 +41,19 @@ usermod -aG docker vagrant
 echo "**********************************"
 echo "* [7]: INSTALLATION DE TERRAFORM *"
 echo "**********************************"
-apt-get install terraform
+apt-get install -y terraform
+sudo -u vagrant terraform -install-autocomplete
+
+echo "**************************************"
+echo "* [8]: INSTALLATION DE AMAZON CLI V2 *"
+echo "**************************************"
+apt-get install -y unzip
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+./aws/install
 
 echo "*************************************************"
-echo "* [8]: INSTALLATION DE TREE ET VIDANGE DU CACHE *"
+echo "* [9]: INSTALLATION DE TREE ET VIDANGE DU CACHE *"
 echo "*************************************************"
 apt-get install -y tree
 apt-get clean -y
