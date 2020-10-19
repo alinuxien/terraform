@@ -16,11 +16,11 @@ AWS CLI V2
 ## Usage
 Dans un terminal : 
 
-Clonez ce dépôt : `git clone` 
+Clonez ce dépôt : `git clone https://github.com/alinuxien/terraform.git` 
 
 Allez dans le dossier terraform : `cd terraform`
 
-Lancer la construction : `vagrant up`
+Lancez la construction : `vagrant up`
 
 Lorsque c'est terminé, connectez-vous à la VM : `vagrant ssh`
 
