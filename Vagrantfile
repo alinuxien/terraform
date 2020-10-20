@@ -1,12 +1,12 @@
-# -*- mode: ruby -*-
-# vi: set ft=ruby :
-
 Vagrant.configure("2") do |config|
   config.vm.define "terraform" do |terraform|
     terraform.vm.box = "hashicorp/bionic64"
     terraform.vm.box_version = "1.0.282"
     terraform.vm.hostname = "terraform"
     terraform.vm.network "forwarded_port", guest: 22, host: 2222
+# LA LIGNE CI-DESSOUS DOIT ETRE SUPPRIMEE
+    terraform.vm.synced_folder "../MlleC", "/home/vagrant/MlleC", type: "virtualbox"
+# LA LIGNE CI-DESSUS DOIT ETRE SUPPRIMEE
     terraform.vm.provider "virtualbox" do |v|
       v.name = "terraform-vieillot"
       v.memory = 4096

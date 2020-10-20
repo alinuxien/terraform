@@ -20,6 +20,8 @@ Clonez ce dépôt : `git clone https://github.com/alinuxien/terraform.git`
 
 Allez dans le dossier terraform : `cd terraform`
 
+Editez les fichiers Vagrantfile et auto_cd.sh pour supprimer 1 ligne dans chacun ( instruction claire à l'intérieur )
+
 Lancez la construction : `vagrant up`
 
 Lorsque c'est terminé, connectez-vous à la VM : `vagrant ssh`
